@@ -1,0 +1,79 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/pexels-engin-akyurt-6424619.jpg);
+    /* filter: brightness(50%); */
+   filter: contrast(80%);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+.game-info{
+    color: white;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 0.5rem 3rem;
+}
+.tic-tac-toe{
+    max-width: 20rem;
+    width: 90%;
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.35);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+}
+.box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    font-size: 3rem;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+}
+.box1,.box2, .box4,.box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+}
+.box3,.box6{
+    border-bottom: 2px solid white;
+}
+.box7,.box8{
+    border-right: 2px solid white;
+}
+.btn{
+    color: white;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(255,255,255,0.25);
+    padding: 0.5rem 2rem;
+    display: none;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 1rem;
+}
+.btn.active{
+    display: flex;
+
+}
+.win{
+    background-color: rgba(0,255,0,0.3);
+}
